@@ -1,0 +1,9 @@
+Robert Alden
+ 
+Calculate the cost of gasoline for travelling a certain distance.
+Inputs: Distance, milePerGallon, costPerGallon
+
+Gallons = Distance/milesPerGallon
+Cost = Gallons * costPerGallon
+
+outputs: Cost

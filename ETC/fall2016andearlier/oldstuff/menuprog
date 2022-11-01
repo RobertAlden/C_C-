@@ -1,0 +1,27 @@
+#!/bin/bash
+
+while [ 1 ]
+do
+echo "           MENU"
+echo "Calender --- C "
+echo "User Info -- U "
+echo "Process Info-P "
+echo "Files -------L "
+echo "Find IP------F "
+echo "Quit---------Q "
+
+read user_opt
+
+case $user_opt in
+	C|c) cal ;;
+	U|u) who ;;
+	L|l) ls ;;
+	P|p) ps aux ;;
+	F|f) echo -n "Enter Web Address: "
+		read web;
+		nslookup $web ;;
+	Q|q) break;;
+esac
+done
+
+echo "Thank you for using this program!!!!"

@@ -1,0 +1,8 @@
+echo "this is test to exe permision"
+who
+ls
+ps
+echo "done"
+
+echo; echo
+

@@ -1,0 +1,64 @@
+#include <iostream>
+#include <iomanip>
+#include <cstdlib>
+#include <math.h>
+#include <time.h>
+#include <string>
+using namespace std;
+
+int main(){
+	//cout << "\u25A0";
+    // Start predefining stuff here
+    enum state {START, ACTIVE, EXIT};
+    enum mapmode {WORLD, LOCAL};
+    state gameState = START;
+    mapmode map = WORLD;
+    int input,topog, localx, localy;
+	int spawn = 0;
+     // array :[x] [y]
+    int world[40][40] = {};
+    int local[40][40] = {};
+	int x,y;
+    string query = "nil";
+    // No more defining stuff.
+    //Initialize
+    srand (time(NULL));
+    for (int v=0;v<40;v++){
+        for (int h=0;h<40;h++)
+        {
+			world[v][h] = 0;
+        }
+    }
+    //End Initialize
+    //WorldGen
+    int gridx = 19;
+    int gridy = 19;
+	int dir;
+	world[gridx][gridy] = 1;
+	world[gridx+1][gridy] = 1;
+	world[gridx][gridy+1] = 1;
+	world[gridx+1][gridy+1] = 1;
+	for (int z = 0;z < 5+rand()%12;z++){
+		for (int q=0;q < 50+rand()%50;q++){
+			dir = rand()%4;
+			switch (dir) {
+				case 0:
+					if (gridx < 39) gridx += 1;
+				break;
+				case 1:
+					if (gridx > 0) gridx -= 1;
+				break;
+				case 2:
+					if (gridy > 0) gridy -= 1;
+				break;
+				case 3:
+				if (gridy < 39) gridy += 1;
+				break;
+			}
+			world[gridx][gridy] = 1;
+		}
+	gridx = 19;
+	gridy = 19;
+	}
+	for (int z = 0;z < 5+rand()%10;z++){
+

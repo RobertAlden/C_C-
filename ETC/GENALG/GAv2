@@ -1,0 +1,65 @@
+#include <iostream>
+#include <iomanip>
+#include <string>
+#include <cstdlib>
+#include <math.h>
+#include <time.h>
+using namespace std;
+
+int leng = 20;
+char answer[leng];
+int maxpop = 10*leng;
+int maxgeneration = 1000 * maxpop; 
+int pop[maxpop][leng];
+int newpop[maxpop][leng];
+double fitness[maxpop] = {};
+
+void Initialize(){
+	srand(time(NULL));
+}
+
+void Populate(){
+	for (int i = 0;i < maxpop;i++){
+		if (pop[i][0] == 0){
+			for (int w = 0;w<leng;w++){
+			if (rand()%2){
+			population[i][w] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ "[rand()%27];
+			}else{
+			population[i][w] = "abcdefghijklmnopqrstuvwxyz "[rand()%27];
+			}
+		}
+	}
+}
+
+void Evaluate(int x){
+	int score = 0;
+	int fitness;
+	for (int i = 0;i < leng;) {
+		if (pop[x][i] == answer[i]) score++;
+	}
+	fitness = score/leng;
+	fitness[i] = fitness;
+}
+
+void Print(){
+	for (int i = 0;i<maxpop;i++){
+		for (int w = 0;w<leng;w++){
+			cout << pop[i][w];
+		}
+		cout << ":" << fitness[i];
+		cout << " ";
+		if (i % 10 == 1) cout << endl;
+	}
+}
+
+main (){
+	string passphrase;
+	cout << "Enter passphrase less than" << leng << "characters long: ";
+	cin >> passphrase;
+	leng = passphrase.length();
+    passphrase.copy(answer, leng);
+	Initialize();
+	Populate();
+	Print();
+	return 0;
+}

@@ -1,0 +1,22 @@
+#!/bin/bash
+
+echo -n "Please enter today's day: "
+read user_resp
+
+if [ $user_resp = "Friday" ]
+then
+	echo "Have a nice weekend!"
+elif [ $user_resp = "Monday" ]
+then
+	echo "Monday is better than Tuesday!"
+else
+	echo "Have a nice day!"
+fi
+	echo -n "Do you want to do it again? "
+	read answer
+	if [ $answer != Y|y ]
+	then
+		exit
+	fi
+
+exit

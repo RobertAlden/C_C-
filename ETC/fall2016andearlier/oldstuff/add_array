@@ -1,0 +1,17 @@
+#!/bin/bash
+
+a=(1 2 3 4 5 6 7 8 9)
+
+size=${#a[*]}
+i=0
+sum=0
+
+while [ $i -lt $size ]
+do
+
+	let sum=sum+a[$i]
+	let i=i+1
+done
+echo
+echo $sum
+echo

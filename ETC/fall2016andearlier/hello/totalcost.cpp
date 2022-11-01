@@ -1,0 +1,23 @@
+// a program to compute the total cost of an item which is on
+// sale for 25% off.
+// using 9.5% sales tax
+
+
+#include <iostream>
+using namespace std; 
+
+
+int main()
+{
+	double price, discount, salePrice, salesTax, totalCost;
+	cout << "ENTER PRICE NOW:" << endl;
+	cin >> price;
+	discount = price * 0.25;
+	salePrice = price - discount;
+	salesTax = salePrice * .095;
+	totalCost = salePrice + salesTax;
+	cout << "total cost is:" << endl;
+	cout << totalCost << endl;
+	
+	return 0;
+}

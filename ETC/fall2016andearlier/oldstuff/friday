@@ -1,0 +1,13 @@
+#!/bin/bash
+
+echo -n "Please enter today's day: "
+read user_resp
+
+if [ $user_resp = "Friday" ]
+then
+	echo "Have a nice weekend!"
+else
+	echo "Have a nice day!"
+fi
+
+exit

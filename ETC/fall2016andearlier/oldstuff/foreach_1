@@ -1,0 +1,6 @@
+#!/bin/bash
+
+for student
+do
+	echo $student "is an excellent student"; echo
+done

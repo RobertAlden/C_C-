@@ -1,0 +1,12 @@
+#!/bin/bash
+sum=0
+echo -n "Enter a number to be counted towards:"
+read num
+echo 0
+while [ $sum -lt $num ]
+do
+	sum=$[$sum+1]
+	echo $sum
+done
+
+exit

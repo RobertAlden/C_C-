@@ -1,0 +1,22 @@
+#!/bin/bash
+
+number=57
+
+while [ 1 ]
+do
+	echo -n "Guess my number! It's between 1 and 100: "
+	read user_answer
+
+	if [ $user_answer -lt $number ]
+	then
+		echo "Higher!"
+	elif [ $user_answer -gt $number ]
+	then
+		echo "Lower!"
+	else 
+		echo "Congratulations!"
+		exit
+	fi
+done
+
+exit

@@ -1,0 +1,22 @@
+#!/bin/bash
+
+number=7
+
+while [ 1 ]
+do
+	echo -n "Enter a number between 1 and 100: "
+	read user_answer
+
+	if [ $user_answer -lt $number ]
+	then
+		echo "higher"
+	elif [ $user_answer -gt $number ]
+	then
+		echo "lower"
+	else 
+		echo "you did it"
+		exit
+	fi
+done
+
+exit

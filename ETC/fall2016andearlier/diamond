@@ -1,0 +1,36 @@
+#include <iostream>
+#include <iomanip>
+#include <math.h>
+using namespace std;
+void displayDiamond(int seed){
+	for (int i = 0;i < seed; i++){
+		int space = floor((seed - (2 * i)) / 2)
+		for (int c = 0;c < space;c++)
+		{
+			cout << " ";
+		}
+		cout << "*";
+		for (int r = 0;r < space;r++)
+		{
+			cout << " ";
+		}
+		cout << endl;
+	};
+
+};
+
+int main(){
+	int base;
+	cout << "Input a odd number value for width for diamond: ";
+	cin << base;
+	if (base / 2 != 0) && (base > 2) then {
+	displayDiamond(base);	
+	}
+	else 
+	{cout << "Your input failed to meet requested parameters so it was adjusted." << endl;
+	base++;
+	displayDiamond(base);
+	}
+	return 0;
+	
+};

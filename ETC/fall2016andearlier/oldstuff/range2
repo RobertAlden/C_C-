@@ -1,0 +1,16 @@
+#!/bin/bash
+
+range[0]=$((RANDOM%15+1))
+range[1]=$((RANDOM%15+1))
+range[2]=$((RANDOM%15+1))
+range[3]=$((RANDOM%15+1))
+range[4]=$((RANDOM%15+1))
+max=0
+echo "These are your numbers:"
+echo ${range[*]}
+for n in "${range[@]}"; do	
+	((n > max)) && max=$n
+done
+echo "The largest number is: $max"
+exit
+

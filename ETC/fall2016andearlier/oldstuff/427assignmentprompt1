@@ -1,0 +1,20 @@
+#!/bin/bash
+
+
+color=orange
+
+while [ 1 ]
+do
+	echo -n "Name a fruit that is it's own color: "
+	read user_answer
+
+	if [ $user_answer != orange ]
+	then
+		echo "Try again! Here's a hint, think about Florida!"
+	else 
+		echo "Correct!"
+		exit
+	fi
+done
+
+exit

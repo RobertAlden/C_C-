@@ -1,0 +1,19 @@
+#!/bin/bash
+
+sum=0
+echo -n "Enter an array: "
+read -a arr
+
+size=${#arr[*]}
+
+echo $size; echo
+
+for value in ${arr[*]}
+do
+	let sum=$sum+$value
+	echo $sum
+done
+
+echo "the sum os $sum"; echo
+
+exit

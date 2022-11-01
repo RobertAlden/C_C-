@@ -1,0 +1,26 @@
+#!/bin/bash
+
+echo -n "What color is the sky on a good day?"
+read color
+
+if [ $color != "blue"  ]
+then
+	echo -n "You have an interesting idea of a good day, would you like try again?"
+	read resp
+	if [ $resp != "yes"  ]
+	then
+		echo "Ok, goodbye!"
+	else
+		echo -n "Ok, go ahead."
+		read color
+		if [ $color = "blue"  ]
+		then 
+			echo "Congratualtions, second times the charm!"
+		else
+			echo "I'm sorry, wrong again, goodbye."
+		exit
+		fi
+else
+	echo "Congratulations!"
+fi
+exit
